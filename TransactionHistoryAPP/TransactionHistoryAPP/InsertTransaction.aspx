@@ -34,6 +34,7 @@
             width:100%;
             position:relative;
             left:10%;
+            top:10px;
         }
         #GridView2
         {
@@ -50,6 +51,14 @@
         .currentNav
         {
             background-color: #eee;
+        }
+        #ListBox1
+        {
+            position:relative;
+            bottom: 30px;
+            left: 50%;
+            width: 164px;
+            height: 176px;
         }
 
     </style>

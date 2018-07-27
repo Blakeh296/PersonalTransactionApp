@@ -14,20 +14,26 @@ namespace TransactionHistoryAPP
     public partial class Default : System.Web.UI.Page
     {
         DataConn dataConn = new DataConn();
+        Encryption encryption = new Encryption();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            TextBox1.BackColor = System.Drawing.Color.LightYellow;
+            TextBox2.BackColor = System.Drawing.Color.LightYellow;
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+        
             try
             {
+                
                 string userName = TextBox1.Text;
                 string passWord = TextBox2.Text;
 
-                dataConn.Login(userName, passWord, out bool returnValue);
+                string hashValue = encryption.Encrypt(passWord);
+
+                dataConn.Login(userName, hashValue, out bool returnValue);
 
                 if (returnValue == true)
                 {
@@ -38,6 +44,8 @@ namespace TransactionHistoryAPP
                 else
                 {
                     Response.Write("UserName or Password Incorrect");
+                    TextBox1.BackColor = System.Drawing.Color.Red;
+                    TextBox2.BackColor = System.Drawing.Color.Red;
                 }
             }
             catch (Exception ex)

@@ -12,6 +12,7 @@ namespace TransactionHistoryAPP
     public class DataConn
     {
         private SqlConnection sqlconn;
+        Encryption encryption = new Encryption();
 
         public void ApplicationLog(string LogMessage)
         {
@@ -31,14 +32,15 @@ namespace TransactionHistoryAPP
             sqlconn = new SqlConnection(ConnectionString);
         }
 
-        public bool Login(string userName, string passWord, out bool returnValue)
+        public bool Login(string userName, string hashValue, out bool returnValue)
         {
             returnValue = false;
             
             try
             {
+                
                 SqlConnection sqlConn;
-
+                
                 string ConnString = ConnString = WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
                 sqlConn = new SqlConnection(ConnString);
 
@@ -54,7 +56,7 @@ namespace TransactionHistoryAPP
                 DataRow[] PasswordDR = dtPasswordCheck.Select("UserName = '" + userName + "'");
                 if (PasswordDR.Any())
                 {
-                    if (PasswordDR[0].ItemArray[2].ToString() == passWord)
+                    if (PasswordDR[0].ItemArray[2].ToString() == hashValue)
                     {
                         returnValue = true;
                     }
@@ -104,6 +106,23 @@ namespace TransactionHistoryAPP
             }
 
             return k;
+        }
+
+        public bool StreamWrite(string tbName, int tbCatID, double tbAmount, string TypeName, DateTime tbTransDate, string tbNotes)
+        {
+            bool returnValue = false;
+            StreamWriter OutPutInserts;
+
+            OutPutInserts = File.AppendText("TransactionHistoryInserts.txt");
+
+            string var = "INSERT INTO TransactionHistory (Name, CategoryID, Amount, TypeName, TransactionDate, Notes) VALUES "
+                + "('" + tbName + "'), " + "('" + tbCatID + "'), " + "('" + tbAmount + "'), "
+                + "(" + TypeName + "'), " + "('" + tbTransDate + "'), " + "('" + tbNotes + "')";
+            
+            OutPutInserts.WriteLine(var);
+            OutPutInserts.Close();
+            
+            return returnValue;
         }
         
         public void Dispose()

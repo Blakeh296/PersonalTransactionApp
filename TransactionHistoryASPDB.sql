@@ -1,3 +1,19 @@
+/*
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+*/
+/*
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+*/
+/*
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+						********** WARNING, DO NOT RUN ENTIRE SCRIPT AT RISK OF LOSING DATA *************
+*/
+
 USE [master]
 GO
 		PRINT ''
@@ -64,9 +80,9 @@ ALTER TABLE TransactionHistory ADD CONSTRAINT FK_TransactionTypeName FOREIGN KEY
 REFERENCES TransactionType (TypeName)
 
 	 -- CAN BE TAKEN TO THE BOTTOM
-INSERT INTO TransactionCategory (CatName) VALUES ('Bill'), ('Misc'), ('Food'), ('Gas'), ('MaryJ'), ('Tobacco'), ('Credit'), ('FamilyPerpetuity')
+INSERT INTO TransactionCategory (CatName) VALUES ('Bill'), ('Income'), ('Food'), ('Gas'), ('MaryJ'), ('Tobacco'), ('Credit'), ('FamilyPerpetuity'), ('Misc')
 INSERT INTO TransactionType (TypeName) VALUES ('Deposit'), ('Widthdraw')
-INSERT INTO [Login] (UserName, [Password]) VALUES ('Blakeh296', 'Shadow7076')
+INSERT INTO [Login] (UserName, [Password]) VALUES ('Blakeh296', 'A0E7C854A2EB64A613768396DF72B515')
 GO
 
 	CREATE PROC InsTransHistory (@Name VARCHAR(200), @CategoryID INT, @Amount MONEY, @TypeName VARCHAR(50), @TransactionDate DATETIME, @Notes VARCHAR(MAX))
@@ -93,3 +109,4 @@ GO
 	GO
 
 	--SELECT * FROM TransactionHistory
+	--SELECT HashBytes('MD5', 'Shadow7076')

@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using System.Text;
+using System.IO;
 
 namespace TransactionHistoryAPP
 {
@@ -17,6 +18,12 @@ namespace TransactionHistoryAPP
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] != null)
+            {
+                Response.Write("Logged in! As : " + Session["Username"]);
+            }
+
+            Session["NewRecord"] = null;
 
         }
 
@@ -42,12 +49,16 @@ namespace TransactionHistoryAPP
                 insertTransaction.CommandType = CommandType.StoredProcedure;
 
                 dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
-                
+
+                //TODO : Class is work in progress, Apparently have to create text file on server then download it some way
+                //dataConn.StreamWrite(name, categoryID, amount, typeName, transactionDate, notes);
+
                 if (k != 0)
                 {
-                    lblOutPut.Text = "Record Recorded !";
-                    lblOutPut.ForeColor = System.Drawing.Color.CornflowerBlue;
+                    Session["NewRecord"] = "Record Recorded !";
                 }
+
+                Response.Redirect("ViewTransactions.aspx");
                 
             }
             catch (Exception ex)
