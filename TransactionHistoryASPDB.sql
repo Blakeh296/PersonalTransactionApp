@@ -110,3 +110,7 @@ GO
 
 	--SELECT * FROM TransactionHistory
 	--SELECT HashBytes('MD5', 'Shadow7076')
+
+	/*update TransactionHistory
+		set TransactionDate = '09-30-2018'
+		where TransactionID = '113'*/
