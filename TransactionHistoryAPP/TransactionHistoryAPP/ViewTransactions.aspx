@@ -73,7 +73,7 @@
                     <asp:Parameter Name="Name" Type="String" />
                     <asp:Parameter Name="CategoryID" Type="Int32" />
                     <asp:Parameter Name="Amount" Type="Decimal" />
-                    <asp:Parameter Name="TypeName" Type="String" />
+                    <asp:Parameter Name="TypeName" Type="String"/>
                     <asp:Parameter Name="TransactionDate" Type="DateTime" />
                     <asp:Parameter Name="Notes" Type="String" />
                 </InsertParameters>
@@ -82,7 +82,7 @@
                     <asp:Parameter Name="CategoryID" Type="Int32" />
                     <asp:Parameter Name="Amount" Type="Decimal" />
                     <asp:Parameter Name="TypeName" Type="String" />
-                    <asp:Parameter Name="TransactionDate" Type="DateTime" />
+                    <asp:Parameter Name="TransactionDate" Type="DateTime"/>
                     <asp:Parameter Name="Notes" Type="String" />
                     <asp:Parameter Name="TransactionID" Type="Int32" />
                 </UpdateParameters>

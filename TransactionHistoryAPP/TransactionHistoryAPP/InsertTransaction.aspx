@@ -82,7 +82,7 @@
             CategoryID : <asp:TextBox ID="tbCategoryID" runat="server"></asp:TextBox>
             Amount : <asp:TextBox ID="tbAmount" runat="server"></asp:TextBox>
             <br /><br />Deposit or Widthdraw? 
-            <asp:TextBox ID="tbTypeName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbTypeName" runat="server" Text="Withdraw"></asp:TextBox>
             Transaction Date : <asp:TextBox ID="tbTransactionDate" runat="server"></asp:TextBox>
             Notes : <asp:TextBox ID="tbNotes" runat="server"></asp:TextBox>
             <asp:Button ID="btnNewTransaction" runat="server" OnClick="btnNewTransaction_Click" Text="Insert to DB" />
