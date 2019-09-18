@@ -13,5 +13,5 @@ WHERE TT.TypeID = 1
 		where TypeID = '2'*/
 
 		/*update TransactionHistory
-		set Name = 'Wal Mart Assocs Payroll'
-		where Name  = 'DirectDeposit'*/
+		set TransactionDate = '05/23/2019'
+		where TransactionID  = '469'*/
