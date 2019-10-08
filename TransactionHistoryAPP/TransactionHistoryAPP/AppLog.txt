@@ -2652,3 +2652,10 @@
 10/7/2019 4:11:20 PM:  Application_BeginRequested.
 10/7/2019 4:11:26 PM:  Application_BeginRequested.
 10/7/2019 4:31:40 PM:  SessionEnded.
+10/8/2019 3:55:25 PM:  Application Started.
+10/8/2019 3:55:25 PM:  Application_BeginRequested.
+10/8/2019 3:55:26 PM:  Session Started. Session ID: 5255
+10/8/2019 3:55:51 PM:  Application_BeginRequested.
+10/8/2019 3:55:51 PM:  Application_BeginRequested.
+10/8/2019 3:56:38 PM:  Application_BeginRequested.
+10/8/2019 4:16:40 PM:  SessionEnded.

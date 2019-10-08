@@ -21,5 +21,9 @@ WHERE TT.TypeID = 1
 		where TransactionID  = '579'*/
 		
 		INSERT INTO TransactionHistory ([Name], CategoryID, Amount, TypeName, TransactionDate, Notes) 
-		VALUES ('Clash Royale','9','3.01','Withdraw', '8/5/2019',''),('Sams Club','3','3.20','Withdraw', '8/5/2019',''),
-		('Bp 8236333Circle K St','6','0.85','Withdraw', '8/5/2019',''),('Sams Club','3','2.13','Withdraw', '8/4/2019','')
+		VALUES ('','','','Withdraw', '9/1/2019',''),('','','','Withdraw', '9/1/2019',''),
+		('','','','Withdraw', '9/1/2019',''),('','','','Withdraw', '9/1/2019','')
+
+		/*
+		('','','','Withdraw', '9/1/2019',''),
+		*/
