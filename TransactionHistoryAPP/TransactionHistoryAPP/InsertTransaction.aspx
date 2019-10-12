@@ -87,7 +87,18 @@
             Notes : <asp:TextBox ID="tbNotes" runat="server"></asp:TextBox>
             <asp:Button ID="btnNewTransaction" runat="server" OnClick="btnNewTransaction_Click" Text="Insert to DB" />
             <asp:Label ID="lblOutPut" runat="server"></asp:Label>
-        </div><br />
+        </div>
+        <br /><br />
+        <div class ="InsertTxtBoxes">
+          <asp:Label ID="lblName2" runat="server" Text="Transaction Name :"></asp:Label><asp:TextBox ID="tbName2" runat="server"></asp:TextBox>
+          <asp:Label ID="lblCatID2" runat="server" Text="CategoryID :"></asp:Label><asp:TextBox ID="tbCatID2" runat="server"></asp:TextBox>
+          <asp:Label ID="lblAmount2" runat="server" Text="Amount :"></asp:Label><asp:TextBox ID="tbAmount2" runat="server"></asp:TextBox>
+                <br /> <br />
+          <asp:Label ID="lblDepositorWithdraw2" runat="server" Text="Deposit or Withdraw?"></asp:Label><asp:TextBox ID="tbDepositorWithdraw2" runat="server" Text="Withdraw"></asp:TextBox>
+          <asp:Label ID="lblTransactionDate2" runat="server" Text="Transaction Date :"></asp:Label><asp:TextBox ID="tbTransactionDate2" runat="server"></asp:TextBox>
+          <asp:Label ID="lblNotes2" runat="server" Text=" Notes :"></asp:Label><asp:TextBox ID="tbNotes2" runat="server"></asp:TextBox>
+        </div>
+        <br />
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=DTPLAPTOP09;Initial Catalog=TransactionHistoryASPNET;Integrated Security=True" DeleteCommand="DELETE FROM [TransactionCategory] WHERE [CategoryID] = @CategoryID" InsertCommand="INSERT INTO [TransactionCategory] ([CatName]) VALUES (@CatName)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [CategoryID], [CatName] FROM [TransactionCategory]" UpdateCommand="UPDATE [TransactionCategory] SET [CatName] = @CatName WHERE [CategoryID] = @CategoryID">
             <DeleteParameters>
                 <asp:Parameter Name="CategoryID" Type="Int32" />

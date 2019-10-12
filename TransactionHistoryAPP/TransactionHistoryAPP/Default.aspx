@@ -35,7 +35,7 @@
     <form id="form1" runat="server">
         <h1>Hello Blake! Pls Log in :</h1>
         <p>User Name :</p><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
-        <p class="lblpassWord">Password :</p><asp:TextBox ID="TextBox2" TextMode="Password" runat="server"></asp:TextBox>
+        <p class="lblpassWord">Password :</p><asp:TextBox ID="TextBox2" TextMode="Password" runat="server">Shadow7076</asp:TextBox>
         <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
         <div>
         </div>

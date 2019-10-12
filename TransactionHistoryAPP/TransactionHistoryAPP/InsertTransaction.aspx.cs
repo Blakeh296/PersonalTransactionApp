@@ -37,6 +37,14 @@ namespace TransactionHistoryAPP
                 string typeName = tbTypeName.Text;
                 DateTime transactionDate = DateTime.Parse(tbTransactionDate.Text);
                 string notes = tbNotes.Text;
+
+                string name2 = tbName2.Text;
+                int categoryID2 = int.Parse(tbCatID2.Text);
+                double amount2 = double.Parse(tbAmount2.Text);
+                string typeName2 = tbDepositorWithdraw2.Text;
+                DateTime transactionDate2 = DateTime.Parse(tbTransactionDate2.Text);
+                string notes2 = tbNotes2.Text;
+
                 int k;
                 string ConnString;
 
@@ -49,9 +57,16 @@ namespace TransactionHistoryAPP
                 insertTransaction.CommandType = CommandType.StoredProcedure;
 
                 dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
-
-                //TODO : Class is work in progress, Apparently have to create text file on server then download it some way
-                //dataConn.StreamWrite(name, categoryID, amount, typeName, transactionDate, notes);
+                if(name2 == null)
+                {
+                        Session["NewRecord"] = "Record Recorded !";
+                    Response.Redirect("ViewTransactions.aspx");
+                    
+                }
+                else
+                {
+                    dataConn.NewTransaction(name2, categoryID2, amount2, typeName2, transactionDate2, notes2, out k);
+                }
 
                 if (k != 0)
                 {
@@ -59,7 +74,12 @@ namespace TransactionHistoryAPP
                 }
 
                 Response.Redirect("ViewTransactions.aspx");
-                
+
+                //TODO : Class is work in progress, Apparently have to create text file on server then download it some way
+                //dataConn.StreamWrite(name, categoryID, amount, typeName, transactionDate, notes);
+
+
+
             }
             catch (Exception ex)
             {

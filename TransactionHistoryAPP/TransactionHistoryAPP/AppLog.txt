@@ -2659,3 +2659,102 @@
 10/8/2019 3:55:51 PM:  Application_BeginRequested.
 10/8/2019 3:56:38 PM:  Application_BeginRequested.
 10/8/2019 4:16:40 PM:  SessionEnded.
+10/12/2019 2:29:48 PM:  Application Started.
+10/12/2019 2:29:48 PM:  Application_BeginRequested.
+10/12/2019 2:29:48 PM:  Session Started. Session ID: 7633
+10/12/2019 2:29:58 PM:  Application_BeginRequested.
+10/12/2019 2:29:58 PM:  Application_BeginRequested.
+10/12/2019 2:30:01 PM:  Application_BeginRequested.
+10/12/2019 2:34:14 PM:  Application Started.
+10/12/2019 2:34:14 PM:  Application_BeginRequested.
+10/12/2019 2:34:16 PM:  Session Started. Session ID: 4585
+10/12/2019 2:34:23 PM:  Application_BeginRequested.
+10/12/2019 2:34:24 PM:  Application_BeginRequested.
+10/12/2019 2:34:25 PM:  Application_BeginRequested.
+10/12/2019 2:36:25 PM:  Application Started.
+10/12/2019 2:36:25 PM:  Application_BeginRequested.
+10/12/2019 2:36:27 PM:  Session Started. Session ID: 9550
+10/12/2019 2:36:37 PM:  Application_BeginRequested.
+10/12/2019 2:36:37 PM:  Application_BeginRequested.
+10/12/2019 2:36:39 PM:  Application_BeginRequested.
+10/12/2019 2:40:26 PM:  Application Started.
+10/12/2019 2:40:27 PM:  Application_BeginRequested.
+10/12/2019 2:40:28 PM:  Session Started. Session ID: 2558
+10/12/2019 2:40:35 PM:  Application_BeginRequested.
+10/12/2019 2:40:35 PM:  Application_BeginRequested.
+10/12/2019 2:40:38 PM:  Application_BeginRequested.
+10/12/2019 2:42:32 PM:  Application Started.
+10/12/2019 2:42:32 PM:  Application_BeginRequested.
+10/12/2019 2:42:33 PM:  Session Started. Session ID: 948
+10/12/2019 2:42:40 PM:  Application_BeginRequested.
+10/12/2019 2:42:40 PM:  Application_BeginRequested.
+10/12/2019 2:42:42 PM:  Application_BeginRequested.
+10/12/2019 2:48:34 PM:  Application Started.
+10/12/2019 2:48:34 PM:  Application_BeginRequested.
+10/12/2019 2:48:35 PM:  Session Started. Session ID: 5215
+10/12/2019 2:48:44 PM:  Application_BeginRequested.
+10/12/2019 2:48:44 PM:  Application_BeginRequested.
+10/12/2019 2:48:46 PM:  Application_BeginRequested.
+10/12/2019 2:49:41 PM:  Application Started.
+10/12/2019 2:49:41 PM:  Application_BeginRequested.
+10/12/2019 2:49:41 PM:  Session Started. Session ID: 6841
+10/12/2019 2:49:50 PM:  Application_BeginRequested.
+10/12/2019 2:49:50 PM:  Application_BeginRequested.
+10/12/2019 2:49:52 PM:  Application_BeginRequested.
+10/12/2019 3:04:51 PM:  Application Started.
+10/12/2019 3:04:51 PM:  Application_BeginRequested.
+10/12/2019 3:04:52 PM:  Session Started. Session ID: 8815
+10/12/2019 3:04:58 PM:  Application_BeginRequested.
+10/12/2019 3:05:02 PM:  Application_BeginRequested.
+10/12/2019 3:05:02 PM:  Application_BeginRequested.
+10/12/2019 3:05:04 PM:  Application_BeginRequested.
+10/12/2019 3:05:57 PM:  Application_BeginRequested.
+10/12/2019 3:05:57 PM:  Application_BeginRequested.
+10/12/2019 3:08:09 PM:  Application Started.
+10/12/2019 3:08:09 PM:  Application_BeginRequested.
+10/12/2019 3:08:09 PM:  Session Started. Session ID: 1851
+10/12/2019 3:08:23 PM:  Application_BeginRequested.
+10/12/2019 3:08:24 PM:  Application_BeginRequested.
+10/12/2019 3:08:27 PM:  Application_BeginRequested.
+10/12/2019 3:08:45 PM:  Application_BeginRequested.
+10/12/2019 3:08:54 PM:  Application_BeginRequested.
+10/12/2019 3:08:55 PM:  Application_BeginRequested.
+10/12/2019 3:08:56 PM:  Application_BeginRequested.
+10/12/2019 3:08:57 PM:  Application_BeginRequested.
+10/12/2019 3:08:58 PM:  Application_BeginRequested.
+10/12/2019 3:08:59 PM:  Application_BeginRequested.
+10/12/2019 3:09:00 PM:  Application_BeginRequested.
+10/12/2019 3:09:00 PM:  Application_BeginRequested.
+10/12/2019 3:10:56 PM:  Application Started.
+10/12/2019 3:10:56 PM:  Application_BeginRequested.
+10/12/2019 3:10:56 PM:  Session Started. Session ID: 6593
+10/12/2019 3:11:03 PM:  Application_BeginRequested.
+10/12/2019 3:11:04 PM:  Application_BeginRequested.
+10/12/2019 3:11:05 PM:  Application_BeginRequested.
+10/12/2019 3:11:20 PM:  Application_BeginRequested.
+10/12/2019 3:11:23 PM:  Application_BeginRequested.
+10/12/2019 3:11:25 PM:  Application_BeginRequested.
+10/12/2019 3:11:26 PM:  Application_BeginRequested.
+10/12/2019 3:11:26 PM:  Application_BeginRequested.
+10/12/2019 3:11:27 PM:  Application_BeginRequested.
+10/12/2019 3:11:28 PM:  Application_BeginRequested.
+10/12/2019 3:11:29 PM:  Application_BeginRequested.
+10/12/2019 3:11:30 PM:  Application_BeginRequested.
+10/12/2019 3:16:30 PM:  Application Started.
+10/12/2019 3:16:30 PM:  Application_BeginRequested.
+10/12/2019 3:16:31 PM:  Session Started. Session ID: 6600
+10/12/2019 3:16:41 PM:  Application_BeginRequested.
+10/12/2019 3:16:41 PM:  Application_BeginRequested.
+10/12/2019 3:16:42 PM:  Application_BeginRequested.
+10/12/2019 3:16:54 PM:  Application_BeginRequested.
+10/12/2019 3:17:22 PM:  Application_BeginRequested.
+10/12/2019 3:17:22 PM:  Application_BeginRequested.
+10/12/2019 3:18:32 PM:  Application Started.
+10/12/2019 3:18:32 PM:  Application_BeginRequested.
+10/12/2019 3:18:33 PM:  Session Started. Session ID: 2177
+10/12/2019 3:19:26 PM:  Application_BeginRequested.
+10/12/2019 3:19:27 PM:  Application_BeginRequested.
+10/12/2019 3:19:28 PM:  Application_BeginRequested.
+10/12/2019 3:19:40 PM:  Application_BeginRequested.
+10/12/2019 3:19:46 PM:  Application_BeginRequested.
+10/12/2019 3:19:46 PM:  Application_BeginRequested.

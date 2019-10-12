@@ -13,7 +13,7 @@ WHERE TT.TypeID = 1
 		INSERT INTO TransactionType (TypeName) VALUES ('Withdraw')
 
 		delete TransactionHistory
-		where TransactionID = '594'
+		where TransactionID = '719'
 
 		update TransactionHistory
 		set TransactionDate = '7/24/2019'
