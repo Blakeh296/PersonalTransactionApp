@@ -77,14 +77,13 @@
         </table>
         
         <div class ="InsertTxtBoxes">
-            <asp:Label ID="Label1" runat="server" Text="Transaction Name :"></asp:Label>
-            <asp:TextBox ID="tbName" runat="server"></asp:TextBox>
-            CategoryID : <asp:TextBox ID="tbCategoryID" runat="server"></asp:TextBox>
-            Amount : <asp:TextBox ID="tbAmount" runat="server"></asp:TextBox>
-            <br /><br />Deposit or Widthdraw? 
-            <asp:TextBox ID="tbTypeName" runat="server" Text="Withdraw"></asp:TextBox>
-            Transaction Date : <asp:TextBox ID="tbTransactionDate" runat="server"></asp:TextBox>
-            Notes : <asp:TextBox ID="tbNotes" runat="server"></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" Text="Transaction Name :"></asp:Label><asp:TextBox ID="tbName" runat="server"></asp:TextBox>
+            <asp:Label ID="lblCategoryID" runat="server" Text="Category ID :"></asp:Label> <asp:TextBox ID="tbCategoryID" runat="server"></asp:TextBox>
+            <asp:Label ID="lblAmount" runat="server" Text="Amount :"></asp:Label> <asp:TextBox ID="tbAmount" runat="server"></asp:TextBox>
+            <br /><br />
+            <asp:Label ID="lblTransTypeName" runat="server" Text="Deposit or Withdraw?"></asp:Label><asp:TextBox ID="tbTypeName" runat="server" Text="Withdraw"></asp:TextBox>
+            <asp:Label ID="lblTransactionDate" runat="server" Text="Transaction Date :"></asp:Label> <asp:TextBox ID="tbTransactionDate" runat="server"></asp:TextBox>
+            <asp:Label ID="lblNotes" runat="server" Text="Notes :"></asp:Label> <asp:TextBox ID="tbNotes" runat="server"></asp:TextBox>
             <asp:Button ID="btnNewTransaction" runat="server" OnClick="btnNewTransaction_Click" Text="Insert to DB" />
             <asp:Label ID="lblOutPut" runat="server"></asp:Label>
         </div>
@@ -92,7 +91,7 @@
         <div class ="InsertTxtBoxes">
           <asp:Label ID="lblName2" runat="server" Text="Transaction Name :"></asp:Label><asp:TextBox ID="tbName2" runat="server"></asp:TextBox>
           <asp:Label ID="lblCatID2" runat="server" Text="CategoryID :"></asp:Label><asp:TextBox ID="tbCatID2" runat="server"></asp:TextBox>
-          <asp:Label ID="lblAmount2" runat="server" Text="Amount :"></asp:Label><asp:TextBox ID="tbAmount2" runat="server"></asp:TextBox>
+          <asp:Label ID="lblAmount2" runat="server" Text="Amount :"></asp:Label><asp:TextBox ID="tbAmount2" runat="server" Text="0"></asp:TextBox>
                 <br /> <br />
           <asp:Label ID="lblDepositorWithdraw2" runat="server" Text="Deposit or Withdraw?"></asp:Label><asp:TextBox ID="tbDepositorWithdraw2" runat="server" Text="Withdraw"></asp:TextBox>
           <asp:Label ID="lblTransactionDate2" runat="server" Text="Transaction Date :"></asp:Label><asp:TextBox ID="tbTransactionDate2" runat="server"></asp:TextBox>

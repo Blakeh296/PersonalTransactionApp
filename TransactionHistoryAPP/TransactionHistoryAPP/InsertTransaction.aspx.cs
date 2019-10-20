@@ -56,24 +56,31 @@ namespace TransactionHistoryAPP
                 SqlCommand insertTransaction = new SqlCommand("dbo.InsTransHistory", sqlConn);
                 insertTransaction.CommandType = CommandType.StoredProcedure;
 
-                dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
-                if(name2 == null)
+                /* AGGG THIS ISNT WORKING THIS IFF */
+
+                if (amount2 == 0)
                 {
+                    dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
+
+                    if (k != 0)
+                    {
                         Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+                else if (amount2 > 0)
+                {
+                    dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
+                    dataConn.NewTransaction(name2, categoryID2, amount2, typeName2, transactionDate2, notes2, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
                     Response.Redirect("ViewTransactions.aspx");
                     
                 }
-                else
-                {
-                    dataConn.NewTransaction(name2, categoryID2, amount2, typeName2, transactionDate2, notes2, out k);
-                }
-
-                if (k != 0)
-                {
-                    Session["NewRecord"] = "Record Recorded !";
-                }
-
-                Response.Redirect("ViewTransactions.aspx");
+                
 
                 //TODO : Class is work in progress, Apparently have to create text file on server then download it some way
                 //dataConn.StreamWrite(name, categoryID, amount, typeName, transactionDate, notes);

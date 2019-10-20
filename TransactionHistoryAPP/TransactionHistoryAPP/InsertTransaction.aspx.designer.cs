@@ -40,6 +40,15 @@ namespace TransactionHistoryAPP {
         protected global::System.Web.UI.WebControls.TextBox tbName;
         
         /// <summary>
+        /// lblCategoryID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCategoryID;
+        
+        /// <summary>
         /// tbCategoryID control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace TransactionHistoryAPP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbCategoryID;
+        
+        /// <summary>
+        /// lblAmount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAmount;
         
         /// <summary>
         /// tbAmount control.
@@ -58,6 +76,15 @@ namespace TransactionHistoryAPP {
         protected global::System.Web.UI.WebControls.TextBox tbAmount;
         
         /// <summary>
+        /// lblTransTypeName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTransTypeName;
+        
+        /// <summary>
         /// tbTypeName control.
         /// </summary>
         /// <remarks>
@@ -67,6 +94,15 @@ namespace TransactionHistoryAPP {
         protected global::System.Web.UI.WebControls.TextBox tbTypeName;
         
         /// <summary>
+        /// lblTransactionDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTransactionDate;
+        
+        /// <summary>
         /// tbTransactionDate control.
         /// </summary>
         /// <remarks>
@@ -74,6 +110,15 @@ namespace TransactionHistoryAPP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbTransactionDate;
+        
+        /// <summary>
+        /// lblNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNotes;
         
         /// <summary>
         /// tbNotes control.
