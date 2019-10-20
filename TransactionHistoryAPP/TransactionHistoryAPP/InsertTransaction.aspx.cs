@@ -38,12 +38,7 @@ namespace TransactionHistoryAPP
                 DateTime transactionDate = DateTime.Parse(tbTransactionDate.Text);
                 string notes = tbNotes.Text;
 
-                string name2 = tbName2.Text;
-                int categoryID2 = int.Parse(tbCatID2.Text);
-                double amount2 = double.Parse(tbAmount2.Text);
-                string typeName2 = tbDepositorWithdraw2.Text;
-                DateTime transactionDate2 = DateTime.Parse(tbTransactionDate2.Text);
-                string notes2 = tbNotes2.Text;
+                
 
                 int k;
                 string ConnString;
@@ -58,20 +53,10 @@ namespace TransactionHistoryAPP
 
                 /* AGGG THIS ISNT WORKING THIS IFF */
 
-                if (amount2 == 0)
+                if (cbTransaction2.Checked != true && cbTransaction3.Checked != true)
                 {
                     dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
-
-                    if (k != 0)
-                    {
-                        Session["NewRecord"] = "Record Recorded !";
-                    }
-                    Response.Redirect("ViewTransactions.aspx");
-                }
-                else if (amount2 > 0)
-                {
-                    dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
-                    dataConn.NewTransaction(name2, categoryID2, amount2, typeName2, transactionDate2, notes2, out k);
+                    
 
                     if (k != 0)
                     {
@@ -80,13 +65,54 @@ namespace TransactionHistoryAPP
                     Response.Redirect("ViewTransactions.aspx");
                     
                 }
-                
 
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true)
+                {
+                    string name2 = tbName2.Text;
+                    int categoryID2 = int.Parse(tbCatID2.Text);
+                    double amount2 = double.Parse(tbAmount2.Text);
+                    string typeName2 = tbDepositorWithdraw2.Text;
+                    DateTime transactionDate2 = DateTime.Parse(tbTransactionDate2.Text);
+                    string notes2 = tbNotes2.Text;
+
+                    string name3 = tbName3.Text;
+                    int categoryID3 = int.Parse(tbCatID3.Text);
+                    double amount3 = double.Parse(tbAmount3.Text);
+                    string typeName3 = tbDepositorWithdraw3.Text;
+                    DateTime transactionDate3 = DateTime.Parse(tbTransactiondate3.Text);
+                    string notes3 = tbNotes3.Text;
+
+                    dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
+                    dataConn.NewTransaction(name2, categoryID2, amount2, typeName2, transactionDate2, notes2, out k);
+                    dataConn.NewTransaction(name3, categoryID3, amount3, typeName3, transactionDate3, notes3, out k);
+                    
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
+                if (cbTransaction2.Checked == true)
+                {
+                    string name2 = tbName2.Text;
+                    int categoryID2 = int.Parse(tbCatID2.Text);
+                    double amount2 = double.Parse(tbAmount2.Text);
+                    string typeName2 = tbDepositorWithdraw2.Text;
+                    DateTime transactionDate2 = DateTime.Parse(tbTransactionDate2.Text);
+                    string notes2 = tbNotes2.Text;
+
+                    dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
+                    dataConn.NewTransaction(name2, categoryID2, amount2, typeName2, transactionDate2, notes2, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
                 //TODO : Class is work in progress, Apparently have to create text file on server then download it some way
                 //dataConn.StreamWrite(name, categoryID, amount, typeName, transactionDate, notes);
-
-
-
             }
             catch (Exception ex)
             {
@@ -94,5 +120,7 @@ namespace TransactionHistoryAPP
                 lblOutPut.ForeColor = System.Drawing.Color.Red;
             }
         }
+
+        
     }
 }
