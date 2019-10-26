@@ -11,18 +11,25 @@ WHERE TT.TypeID = 1
 		SELECT * FROM TransactionType
 
 		INSERT INTO TransactionType (TypeName) VALUES ('Withdraw')
-
+		
 		delete TransactionHistory
-		where TransactionID = '739'
+		where TransactionID = '763'
+		delete TransactionHistory
+		where TransactionID = '764'delete TransactionHistory
+		where TransactionID = '765'delete TransactionHistory
+		where TransactionID = '756'delete TransactionHistory
+		where TransactionID = '757'
 
 		update TransactionHistory
-		set TransactionDate = '7/24/2019'
-		where TransactionID  = '720'
+		set TypeName = 'Deposit'
+		where TransactionID  = '754'
 		
 		SELECT * FROM [TransactionHistory]
 		SELECT * FROM [TransactionCategory]
 		*/
-		
+		 TRANSACTION BEGIN END
+		ROLLBACK TRANSACTION
+		--BACK UP DATABASE
 		INSERT INTO TransactionHistory ([Name], CategoryID, Amount, TypeName, TransactionDate, Notes) 
 		VALUES ('Wal Mart Assocs Payroll','1','711.27','Withdraw', '10/3/2019',''),('Cristy Dental','1','33','Withdraw', '10/4/2019','Filling'),
 		('Usaacatm19 ATM','8','160','Withdraw', '10/4/2019',''),('Usaacatm19 ATM', '5','90','Withdraw', '10/4/2019',''),('Clash Royale','9','1.34','Withdraw', '10/7/2019',''),

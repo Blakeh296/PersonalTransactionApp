@@ -30,15 +30,7 @@ namespace TransactionHistoryAPP
         protected void btnNewTransaction_Click(object sender, EventArgs e)
         {
             try
-            {
-                string name = tbName.Text;
-                int categoryID = int.Parse(tbCategoryID.Text);
-                double amount = double.Parse(tbAmount.Text);
-                string typeName = tbTypeName.Text;
-                DateTime transactionDate = DateTime.Parse(tbTransactionDate.Text);
-                string notes = tbNotes.Text;
-
-                
+            {  
 
                 int k;
                 string ConnString;
@@ -53,10 +45,10 @@ namespace TransactionHistoryAPP
 
                 /* AGGG THIS ISNT WORKING THIS IFF */
 
-                if (cbTransaction2.Checked != true && cbTransaction3.Checked != true)
+                if (cbTransaction2.Checked != true && cbTransaction3.Checked != true && cbTransaction4.Checked != true && cbTransaction5.Checked != true
+                    &&cbTransaction6.Checked != true && cbTransaction7.Checked != true && cbTransaction8.Checked != true && cbTransaction9.Checked != true && cbTransaction10.Checked != true)
                 {
-                    dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
-                    
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
 
                     if (k != 0)
                     {
@@ -66,26 +58,153 @@ namespace TransactionHistoryAPP
                     
                 }
 
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true && cbTransaction4.Checked == true && cbTransaction5.Checked == true & cbTransaction6.Checked == true
+                    && cbTransaction7.Checked == true && cbTransaction8.Checked == true && cbTransaction9.Checked == true && cbTransaction10.Checked == true)
+                {
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
+                    dataConn.NewTransaction(tbName4.Text, int.Parse(tbCatID4.Text), double.Parse(tbAmount4.Text), tbDepositorWithdraw4.Text, DateTime.Parse(tbTransactionDate4.Text), tbNotes4.Text, out k);
+                    dataConn.NewTransaction(tbName5.Text, int.Parse(tbCatID5.Text), double.Parse(tbAmount5.Text), tbDepositorWithdraw5.Text, DateTime.Parse(tbTransactionDate5.Text), tbNotes5.Text, out k);
+                    dataConn.NewTransaction(tbName6.Text, int.Parse(tbCatID6.Text), double.Parse(tbAmount6.Text), tbDepositorWithdraw6.Text, DateTime.Parse(tbTransactionDate6.Text), tbNotes6.Text, out k);
+                    dataConn.NewTransaction(tbName7.Text, int.Parse(tbCatID7.Text), double.Parse(tbAmount7.Text), tbDepositorWithdraw7.Text, DateTime.Parse(tbTransactionDate7.Text), tbNotes7.Text, out k);
+                    dataConn.NewTransaction(tbName8.Text, int.Parse(tbCatID8.Text), double.Parse(tbAmount8.Text), tbDepositorWithdraw8.Text, DateTime.Parse(tbTransactionDate8.Text), tbNotes8.Text, out k);
+                    dataConn.NewTransaction(tbName9.Text, int.Parse(tbCatID9.Text), double.Parse(tbAmount9.Text), tbDepositorWithdraw9.Text, DateTime.Parse(tbTransactionDate9.Text), tbNotes9.Text, out k);
+                    dataConn.NewTransaction(tbName10.Text, int.Parse(tbCatID10.Text), double.Parse(tbAmount10.Text), tbDepositorWithdraw10.Text, DateTime.Parse(tbTransactionDate10.Text), tbNotes10.Text, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true && cbTransaction4.Checked == true && cbTransaction5.Checked == true & cbTransaction6.Checked == true
+                    && cbTransaction7.Checked == true && cbTransaction8.Checked == true && cbTransaction9.Checked == true)
+                {
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
+                    dataConn.NewTransaction(tbName4.Text, int.Parse(tbCatID4.Text), double.Parse(tbAmount4.Text), tbDepositorWithdraw4.Text, DateTime.Parse(tbTransactionDate4.Text), tbNotes4.Text, out k);
+                    dataConn.NewTransaction(tbName5.Text, int.Parse(tbCatID5.Text), double.Parse(tbAmount5.Text), tbDepositorWithdraw5.Text, DateTime.Parse(tbTransactionDate5.Text), tbNotes5.Text, out k);
+                    dataConn.NewTransaction(tbName6.Text, int.Parse(tbCatID6.Text), double.Parse(tbAmount6.Text), tbDepositorWithdraw6.Text, DateTime.Parse(tbTransactionDate6.Text), tbNotes6.Text, out k);
+                    dataConn.NewTransaction(tbName7.Text, int.Parse(tbCatID7.Text), double.Parse(tbAmount7.Text), tbDepositorWithdraw7.Text, DateTime.Parse(tbTransactionDate7.Text), tbNotes7.Text, out k);
+                    dataConn.NewTransaction(tbName8.Text, int.Parse(tbCatID8.Text), double.Parse(tbAmount8.Text), tbDepositorWithdraw8.Text, DateTime.Parse(tbTransactionDate8.Text), tbNotes8.Text, out k);
+                    dataConn.NewTransaction(tbName9.Text, int.Parse(tbCatID9.Text), double.Parse(tbAmount9.Text), tbDepositorWithdraw9.Text, DateTime.Parse(tbTransactionDate9.Text), tbNotes9.Text, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true && cbTransaction4.Checked == true && cbTransaction5.Checked == true & cbTransaction6.Checked == true
+                    && cbTransaction7.Checked == true && cbTransaction8.Checked == true)
+                {
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
+                    dataConn.NewTransaction(tbName4.Text, int.Parse(tbCatID4.Text), double.Parse(tbAmount4.Text), tbDepositorWithdraw4.Text, DateTime.Parse(tbTransactionDate4.Text), tbNotes4.Text, out k);
+                    dataConn.NewTransaction(tbName5.Text, int.Parse(tbCatID5.Text), double.Parse(tbAmount5.Text), tbDepositorWithdraw5.Text, DateTime.Parse(tbTransactionDate5.Text), tbNotes5.Text, out k);
+                    dataConn.NewTransaction(tbName6.Text, int.Parse(tbCatID6.Text), double.Parse(tbAmount6.Text), tbDepositorWithdraw6.Text, DateTime.Parse(tbTransactionDate6.Text), tbNotes6.Text, out k);
+                    dataConn.NewTransaction(tbName7.Text, int.Parse(tbCatID7.Text), double.Parse(tbAmount7.Text), tbDepositorWithdraw7.Text, DateTime.Parse(tbTransactionDate7.Text), tbNotes7.Text, out k);
+                    dataConn.NewTransaction(tbName8.Text, int.Parse(tbCatID8.Text), double.Parse(tbAmount8.Text), tbDepositorWithdraw8.Text, DateTime.Parse(tbTransactionDate8.Text), tbNotes8.Text, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true && cbTransaction4.Checked == true && cbTransaction5.Checked == true & cbTransaction6.Checked == true
+                    && cbTransaction7.Checked == true)
+                {
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
+                    dataConn.NewTransaction(tbName4.Text, int.Parse(tbCatID4.Text), double.Parse(tbAmount4.Text), tbDepositorWithdraw4.Text, DateTime.Parse(tbTransactionDate4.Text), tbNotes4.Text, out k);
+                    dataConn.NewTransaction(tbName5.Text, int.Parse(tbCatID5.Text), double.Parse(tbAmount5.Text), tbDepositorWithdraw5.Text, DateTime.Parse(tbTransactionDate5.Text), tbNotes5.Text, out k);
+                    dataConn.NewTransaction(tbName6.Text, int.Parse(tbCatID6.Text), double.Parse(tbAmount6.Text), tbDepositorWithdraw6.Text, DateTime.Parse(tbTransactionDate6.Text), tbNotes6.Text, out k);
+                    dataConn.NewTransaction(tbName7.Text, int.Parse(tbCatID7.Text), double.Parse(tbAmount7.Text), tbDepositorWithdraw7.Text, DateTime.Parse(tbTransactionDate7.Text), tbNotes7.Text, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true && cbTransaction4.Checked == true && cbTransaction5.Checked == true & cbTransaction6.Checked == true)
+                {
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
+                    dataConn.NewTransaction(tbName4.Text, int.Parse(tbCatID4.Text), double.Parse(tbAmount4.Text), tbDepositorWithdraw4.Text, DateTime.Parse(tbTransactionDate4.Text), tbNotes4.Text, out k);
+                    dataConn.NewTransaction(tbName5.Text, int.Parse(tbCatID5.Text), double.Parse(tbAmount5.Text), tbDepositorWithdraw5.Text, DateTime.Parse(tbTransactionDate5.Text), tbNotes5.Text, out k);
+                    dataConn.NewTransaction(tbName6.Text, int.Parse(tbCatID6.Text), double.Parse(tbAmount6.Text), tbDepositorWithdraw6.Text, DateTime.Parse(tbTransactionDate6.Text), tbNotes6.Text, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true && cbTransaction4.Checked == true && cbTransaction5.Checked == true)
+                {
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
+                    dataConn.NewTransaction(tbName4.Text, int.Parse(tbCatID4.Text), double.Parse(tbAmount4.Text), tbDepositorWithdraw4.Text, DateTime.Parse(tbTransactionDate4.Text), tbNotes4.Text, out k);
+                    dataConn.NewTransaction(tbName5.Text, int.Parse(tbCatID5.Text), double.Parse(tbAmount5.Text), tbDepositorWithdraw5.Text, DateTime.Parse(tbTransactionDate5.Text), tbNotes5.Text, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
+
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true && cbTransaction4.Checked == true && cbTransaction5.Checked == true)
+                {
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
+                    dataConn.NewTransaction(tbName4.Text, int.Parse(tbCatID4.Text), double.Parse(tbAmount4.Text), tbDepositorWithdraw4.Text, DateTime.Parse(tbTransactionDate4.Text), tbNotes4.Text, out k);
+                    dataConn.NewTransaction(tbName5.Text, int.Parse(tbCatID5.Text), double.Parse(tbAmount5.Text), tbDepositorWithdraw5.Text, DateTime.Parse(tbTransactionDate5.Text), tbNotes5.Text, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
+                if (cbTransaction2.Checked == true && cbTransaction3.Checked == true && cbTransaction4.Checked == true)
+                {
+
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
+                    dataConn.NewTransaction(tbName4.Text, int.Parse(tbCatID4.Text), double.Parse(tbAmount4.Text), tbDepositorWithdraw4.Text, DateTime.Parse(tbTransactionDate4.Text), tbNotes4.Text, out k);
+
+                    if (k != 0)
+                    {
+                        Session["NewRecord"] = "Record Recorded !";
+                    }
+                    Response.Redirect("ViewTransactions.aspx");
+                }
+
                 if (cbTransaction2.Checked == true && cbTransaction3.Checked == true)
                 {
-                    string name2 = tbName2.Text;
-                    int categoryID2 = int.Parse(tbCatID2.Text);
-                    double amount2 = double.Parse(tbAmount2.Text);
-                    string typeName2 = tbDepositorWithdraw2.Text;
-                    DateTime transactionDate2 = DateTime.Parse(tbTransactionDate2.Text);
-                    string notes2 = tbNotes2.Text;
 
-                    string name3 = tbName3.Text;
-                    int categoryID3 = int.Parse(tbCatID3.Text);
-                    double amount3 = double.Parse(tbAmount3.Text);
-                    string typeName3 = tbDepositorWithdraw3.Text;
-                    DateTime transactionDate3 = DateTime.Parse(tbTransactiondate3.Text);
-                    string notes3 = tbNotes3.Text;
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
+                    dataConn.NewTransaction(tbName3.Text, int.Parse(tbCatID3.Text), double.Parse(tbAmount3.Text), tbDepositorWithdraw3.Text, DateTime.Parse(tbTransactiondate3.Text), tbNotes3.Text, out k);
 
-                    dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
-                    dataConn.NewTransaction(name2, categoryID2, amount2, typeName2, transactionDate2, notes2, out k);
-                    dataConn.NewTransaction(name3, categoryID3, amount3, typeName3, transactionDate3, notes3, out k);
-                    
                     if (k != 0)
                     {
                         Session["NewRecord"] = "Record Recorded !";
@@ -95,15 +214,9 @@ namespace TransactionHistoryAPP
 
                 if (cbTransaction2.Checked == true)
                 {
-                    string name2 = tbName2.Text;
-                    int categoryID2 = int.Parse(tbCatID2.Text);
-                    double amount2 = double.Parse(tbAmount2.Text);
-                    string typeName2 = tbDepositorWithdraw2.Text;
-                    DateTime transactionDate2 = DateTime.Parse(tbTransactionDate2.Text);
-                    string notes2 = tbNotes2.Text;
 
-                    dataConn.NewTransaction(name, categoryID, amount, typeName, transactionDate, notes, out k);
-                    dataConn.NewTransaction(name2, categoryID2, amount2, typeName2, transactionDate2, notes2, out k);
+                    dataConn.NewTransaction(tbName.Text, int.Parse(tbCategoryID.Text), double.Parse(tbAmount.Text), tbTypeName.Text, DateTime.Parse(tbTransactionDate.Text), tbNotes.Text, out k);
+                    dataConn.NewTransaction(tbName2.Text, int.Parse(tbCatID2.Text), double.Parse(tbAmount2.Text), tbDepositorWithdraw2.Text, DateTime.Parse(tbTransactionDate2.Text), tbNotes2.Text, out k);
 
                     if (k != 0)
                     {
